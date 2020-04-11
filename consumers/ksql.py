@@ -30,7 +30,7 @@ KSQL_STATEMENT = """
         KAFKA_TOPIC='org.chicago.station.turnstile',
         VALUE_FORMAT='avro',
         KEY='station_id'
-    );
+    );  
     
     CREATE TABLE turnstile_summary
     WITH (VALUE_FORMAT='json') AS
@@ -38,6 +38,8 @@ KSQL_STATEMENT = """
         FROM turnstile
         GROUP BY station_id;
 """
+
+
 
 
 def execute_statement():
