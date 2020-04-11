@@ -28,7 +28,7 @@ class Turnstile(Producer):
         )
 
         super().__init__(
-            # f"org.chicago.stations.{station_name}", # TODO: Come up with a better topic name
+            # f"org.chicago.stations.{station_name}",
             f"org.chicago.stations.turnstile",
             key_schema=Turnstile.key_schema,
             value_schema=Turnstile.value_schema,
