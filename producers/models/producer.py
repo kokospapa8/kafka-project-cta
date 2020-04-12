@@ -32,7 +32,7 @@ class Producer:
         self.num_replicas = num_replicas
 
         self.broker_properties = {
-            "bootstrap.servers": Kafka_URL,
+            "bootstrap.servers": Kafka_URL[0],
             "schema.registry.url": Schema_Registry_URL,
         }
 
