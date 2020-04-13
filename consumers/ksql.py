@@ -19,7 +19,7 @@ KSQL_STATEMENT = """
         station_name VARCHAR,
         line VARCHAR
     ) WITH (
-        KAFKA_TOPIC='org.chicago.station.turnstile',
+        KAFKA_TOPIC='org.chicago.stations.turnstile',
         VALUE_FORMAT='avro',
         KEY='station_id'
     );  

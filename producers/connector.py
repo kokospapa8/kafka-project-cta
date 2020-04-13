@@ -3,12 +3,12 @@ import json
 import logging
 
 import requests
-from const import PostgreSQL_URL, PostgreSQL_PASSWORD, PostgreSQL_USERNAME
+from const import PostgreSQL_URL, PostgreSQL_PASSWORD, PostgreSQL_USERNAME, Kafka_Connect_URL
 
 logger = logging.getLogger(__name__)
 
 
-KAFKA_CONNECT_URL = "http://localhost:8083/connectors"
+KAFKA_CONNECT_URL = f"{Kafka_Connect_URL}/connectors"
 CONNECTOR_NAME = "stations"
 
 def configure_connector():
