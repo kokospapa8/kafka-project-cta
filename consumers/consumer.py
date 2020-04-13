@@ -6,7 +6,6 @@ from confluent_kafka import Consumer
 from confluent_kafka.avro import AvroConsumer
 from confluent_kafka.avro.serializer import SerializerError
 from tornado import gen
-from const import Kafka_URL, Schema_Registry_URL
 
 
 logger = logging.getLogger(__name__)
@@ -33,7 +32,7 @@ class KafkaConsumer:
 
 
         self.broker_properties = {
-            "bootstrap.servers": Kafka_URL,
+            "bootstrap.servers": "localhost:9092",
             "group.id": f"{topic_name_pattern}",
             "default.topic.config": {"auto.offset.reset": "earliest"},
         }
